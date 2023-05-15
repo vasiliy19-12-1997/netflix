@@ -1,0 +1,21 @@
+@import "../../../properties.scss";
+.sidebar {
+  ul {
+    li {
+      margin-bottom: 0.4rem;
+      a {
+        padding: 0.5rem;
+        display: block;
+        color: $gray;
+        text-decoration: none;
+        border-right: 2px solid transparent;
+        font-size: 20px;
+        &:hover,
+        &:active {
+          border-color: $red;
+          background-color: #0c0b0d;
+        }
+      }
+    }
+  }
+}

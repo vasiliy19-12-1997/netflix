@@ -1,0 +1,17 @@
+@import "../../../properties.scss";
+.wrapper {
+  position: relative;
+  .info {
+    width: 50%;
+    .additional {
+      display: flex;
+      align-items: center;
+      color: $gray;
+
+      > span {
+        margin-right: 0.5rem;
+        font-size: 18px;
+      }
+    }
+  }
+}
