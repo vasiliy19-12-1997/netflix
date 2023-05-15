@@ -2,12 +2,13 @@ import { FC, useState } from "react";
 import Sidebar from "../../UI/Sidebar/sidebar";
 import Information from "./information";
 import { data } from "../../../data";
-import Navigation from "../../UI/Navigation/navigation";
 import s from "./main.module.scss";
+import NavigationButtom from "../../UI/Navigation/navigation";
+import Episodes from "../Episodes/episodes";
 type Props = {};
 
 const Main: FC = (props: Props) => {
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(1);
   const [isSideBarShow, setIsSideBarShow] = useState(false);
 
   return (
@@ -17,12 +18,18 @@ const Main: FC = (props: Props) => {
         setIsSideBarShow={setIsSideBarShow}
       />
       <div
+        className={s.main}
         style={{
           backgroundImage: `url(${data[0].mainImage})`,
+          width: isSideBarShow ? "85%" : "90%",
         }}
       >
-        <Information movie={data[0]} />
-        <Navigation activeTab={activeTab} setActiveTab={setActiveTab} />
+        {activeTab === 1 ? (
+          <Information movie={data[0]} />
+        ) : (
+          activeTab === 2 && <Episodes />
+        )}
+        <NavigationButtom activeTab={activeTab} setActiveTab={setActiveTab} />
       </div>
     </div>
   );

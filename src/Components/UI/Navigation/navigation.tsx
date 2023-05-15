@@ -1,14 +1,12 @@
 import React from "react";
-
-type Props = {};
-import s from "./navigation.module.scss";
-import MyButton from "./../MyButton/myButton";
 import { tabs } from "../../../data";
+import s from "./navigation.module.scss";
+
 interface InavigationProps {
   activeTab: number;
   setActiveTab: React.Dispatch<React.SetStateAction<number>>;
 }
-const Navigation = (props: InavigationProps) => {
+const NavigationButtom = (props: InavigationProps) => {
   return (
     <nav className={s.nav}>
       {tabs.map((tab) => (
@@ -24,4 +22,4 @@ const Navigation = (props: InavigationProps) => {
   );
 };
 
-export default Navigation;
+export default NavigationButtom;

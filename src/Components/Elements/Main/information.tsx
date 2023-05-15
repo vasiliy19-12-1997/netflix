@@ -16,7 +16,7 @@ const Information = (props: IinformationProps) => {
   };
   return (
     <div className={s.info}>
-      <img src={props.movie.logo} alt="" width={200} />
+      <img src={props.movie.logo} alt="" width={200} style={{ opacity: 0.7 }} />
       <div className={s.additional}>
         <span>{props.movie.year}</span>
         <span>{props.movie.limitAge}</span>

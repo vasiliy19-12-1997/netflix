@@ -1,3 +1,4 @@
+@import "../../../properties.scss";
 .nav {
   width: 100%;
   display: flex;
@@ -6,15 +7,19 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 1;
   > button {
     opacity: 0.8;
     transition: border-color 0.4s ease, opacity 0.4s ease;
-    border-bottom: 2px solid transparent;
+    border: none;
+    border-bottom: 4px solid transparent;
     padding-bottom: 0.5rem;
     font-size: 20px;
     text-transform: uppercase;
-    color: #c62e21;
-    &active {
+    color: #fff;
+    background-color: transparent;
+    margin: 0 1rem;
+    &.active {
       border-color: #c62e21;
       opacity: 1;
     }

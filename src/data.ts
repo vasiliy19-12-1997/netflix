@@ -36,3 +36,4 @@ export const tabs = [
     name: "Details",
   },
 ];
+export const menu = ["Popular", "TV Shows", "Films", "My list"];

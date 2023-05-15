@@ -1,6 +1,19 @@
 @import "../../../properties.scss";
 .sidebar {
+  > button {
+    background-color: transparent;
+    border: none;
+    color: $gray;
+    font-size: 30px;
+  }
   ul {
+    padding: 0;
+    list-style-type: none;
+    display: none;
+    animation: opacity 0.4s;
+    &.show {
+      display: block;
+    }
     li {
       margin-bottom: 0.4rem;
       a {
@@ -8,7 +21,7 @@
         display: block;
         color: $gray;
         text-decoration: none;
-        border-right: 2px solid transparent;
+        border-left: 2px solid transparent;
         font-size: 20px;
         &:hover,
         &:active {
